@@ -1,0 +1,56 @@
+CLS
+INPUT "Statistique mensuel de Janvier ? ", Jan
+INPUT "Statistique mensuel de Fevrier ? ", Fev
+INPUT "Statistique mensuel de Mars ? ", Mar
+INPUT "Statistique mensuel d'Avril ? ", Avr
+INPUT "Statistique mensuel de Mai ? ", Mai
+INPUT "Statistique mensuel de Juin ? ", Jui
+INPUT "Statistique mensuel de Juillet ? ", Jul
+INPUT "Statistique mensuel d'Aout ? ", Aou
+INPUT "Statistique mensuel de Septembre ? ", Sep
+INPUT "Statistique mensuel d'Octobre ? ", Oct
+INPUT "Statistique mensuel de Novembre ? ", Nov
+INPUT "Statistique mensuel de Decembre ? ", Dec
+machin:
+CLS : PRINT "                            Statistique; mensuel"
+FOR I% = 0 TO 19
+ PRINT "     :"
+ NEXT I%
+PRINT "       ----------------------------------------------------------"
+PRINT "       Jan  FÇv  Mar  Avr  Mai  Jui  Jul  Aou  Sep  Oct  Nov  DÇc"
+y = 3
+Jan = Jan - 1
+Fev = Fev - 1
+Mar = Mar - 1
+Avr = Avr - 1
+Mai = Mai - 1
+Jui = Jui - 1
+Jul = Jul - 1
+Aou = Aou - 1
+Sep = Sep - 1
+Oct = Oct - 1
+Nov = Nov - 1
+Dec = Dec - 1
+Bare% = Jan: y = y + 5: GOSUB dessin
+Bare% = Fev: y = y + 5: GOSUB dessin
+Bare% = Mar: y = y + 5: GOSUB dessin
+Bare% = Avr: y = y + 5: GOSUB dessin
+Bare% = Mai: y = y + 5: GOSUB dessin
+Bare% = Jui: y = y + 5: GOSUB dessin
+Bare% = Jul: y = y + 5: GOSUB dessin
+Bare% = Aou: y = y + 5: GOSUB dessin
+Bare% = Sep: y = y + 5: GOSUB dessin
+Bare% = Oct: y = y + 5: GOSUB dessin
+Bare% = Nov: y = y + 5: GOSUB dessin
+Bare% = Dec: y = y + 5: GOSUB dessin
+WHILE INKEY$ = "": WEND
+CLS
+END
+dessin:
+Bare% = 21 - Bare%
+FOR J% = 21 TO Bare% STEP -1
+LOCATE J%, y
+PRINT "€€€"
+NEXT J%
+RETURN
+

@@ -1,0 +1,737 @@
+                      '**************************
+                      '*        MORPION         *
+                      '**************************
+                       REM fais par sylvain pajaud
+      DIM bidule
+      SCREEN 9
+      COLOR 15, 0
+      bidule = 0
+      bidule2 = 0
+nom1:
+      CLS
+      BEEP
+      SCREEN 9
+      LOCATE 1, 2
+      PRINT "Fait par Sylvain Pajaud"
+      LOCATE 2, 2
+      INPUT "Joueur1 ", nom1$
+      LOCATE 2, 2
+      GOTO nom2
+nom2: BEEP
+      LOCATE 2, 2
+      PRINT "                      "
+      LOCATE 2, 2
+      INPUT "Joueur2 ", nom2$
+      IF nom2$ = "5" GOTO nom1
+      GOTO cond
+cond: BEEP
+      PRINT "                      "
+      LOCATE 2, 2
+      INPUT "Qui commence ? ", sylvain$
+      CLS
+      bidule = 0
+      GOTO deb
+      END
+condi:
+      COLOR 15, 0
+      BEEP
+      IF c9 = 3 AND bidule2 = 0 THEN GOTO croixgagne
+      IF c9 = 3 AND bidule2 = 1 THEN GOTO croix2gagne
+      IF c9 = 3 AND bidule2 = 2 THEN GOTO croix3gagne
+      IF c10 = 3 AND bidule2 = 0 THEN GOTO croix4gagne
+      IF c10 = 3 AND bidule2 = 1 THEN GOTO croix5gagne
+      IF c10 = 3 AND bidule2 = 2 THEN GOTO croix6gagne
+      IF c11 = 3 AND bidule2 = 0 THEN GOTO croix7gagne
+      IF c11 = 3 AND bidule2 = 1 THEN GOTO croix8gagne
+      IF c11 = 3 AND bidule2 = 2 THEN GOTO croix9gagne
+      IF c12 = 3 AND bidule2 = 0 THEN GOTO croixgagne
+      IF c12 = 3 AND bidule2 = 1 THEN GOTO croix4gagne
+      IF c12 = 3 AND bidule2 = 2 THEN GOTO croix7gagne
+      IF c13 = 3 AND bidule2 = 0 THEN GOTO croix2gagne
+      IF c13 = 3 AND bidule2 = 1 THEN GOTO croix5gagne
+      IF c13 = 3 AND bidule2 = 2 THEN GOTO croix8gagne
+      IF c14 = 3 AND bidule2 = 0 THEN GOTO croix3gagne
+      IF c14 = 3 AND bidule2 = 1 THEN GOTO croix6gagne
+      IF c14 = 3 AND bidule2 = 2 THEN GOTO croix9gagne
+      IF c15 = 3 AND bidule2 = 0 THEN GOTO croixgagne
+      IF c15 = 3 AND bidule2 = 1 THEN GOTO croix5gagne
+      IF c15 = 3 AND bidule2 = 2 THEN GOTO croix9gagne
+      IF c16 = 3 AND bidule2 = 0 THEN GOTO croix3gagne
+      IF c16 = 3 AND bidule2 = 1 THEN GOTO croix5gagne
+      IF c16 = 3 AND bidule2 = 2 THEN GOTO croix7gagne
+      LOCATE 2, 2: PRINT "C'est … "; nom1$; " de jouer"
+      LOCATE 4, 2: INPUT "Case ? ", Sylvain2
+      Bidule3 = Sylvain2
+      LOCATE 4, 7: PRINT "  "
+      IF Sylvain2 = 1 THEN x = 130: y = 50: c = c + 1: c4 = c4 + 1: c8 = c8 + 1: GOTO rond
+      IF Sylvain2 = 2 THEN x = 275: y = 50: c = c + 1: c5 = c5 + 1: GOTO rond
+      IF Sylvain2 = 3 THEN x = 410: y = 50: c = c + 1: c6 = c6 + 1: c7 = c7 + 1: GOTO rond
+      IF Sylvain2 = 4 THEN x = 130: y = 150: c4 = c4 + 1: c2 = c2 + 1: GOTO rond
+      IF Sylvain2 = 5 THEN x = 275: y = 150: c2 = c2 + 1: c5 = c5 + 1: c8 = c8 + 1: c7 = c7 + 1: GOTO rond
+      IF Sylvain2 = 6 THEN x = 410: y = 150: c2 = c2 + 1: c6 = c6 + 1: GOTO rond
+      IF Sylvain2 = 7 THEN x = 130: y = 250: c4 = c4 + 1: c3 = c3 + 1: c7 = c7 + 1: GOTO rond
+      IF Sylvain2 = 8 THEN x = 275: y = 250: c3 = c3 + 1: c5 = c5 + 1: GOTO rond
+      IF Sylvain2 = 9 THEN x = 410: y = 250: c3 = c3 + 1: c6 = c6 + 1: c8 = c8 + 1: GOTO rond
+      IF Sylvain2 = 10 GOTO deb
+      IF Sylvain2 = 11 GOTO retour2
+      END
+condi2:
+      IF c = 3 AND bidule = 0 THEN cou = 1: GOTO rondgagne
+      IF c = 3 AND bidule = 1 THEN cou = 1: GOTO rond2gagne
+      IF c = 3 AND bidule = 2 THEN cou = 1: GOTO rond3gagne
+      IF c2 = 3 AND bidule = 0 THEN cou = 1: GOTO rond4gagne
+      IF c2 = 3 AND bidule = 1 THEN cou = 1: GOTO rond5gagne
+      IF c2 = 3 AND bidule = 2 THEN cou = 1: GOTO rond6gagne
+      IF c3 = 3 AND bidule = 0 THEN cou = 1: GOTO rond7gagne
+      IF c3 = 3 AND bidule = 1 THEN cou = 1: GOTO rond8gagne
+      IF c3 = 3 AND bidule = 2 THEN cou = 1: GOTO rond9gagne
+      IF c4 = 3 AND bidule = 0 THEN cou = 1: GOTO rondgagne
+      IF c4 = 3 AND bidule = 1 THEN cou = 1: GOTO rond4gagne
+      IF c4 = 3 AND bidule = 2 THEN cou = 1: GOTO rond7gagne
+      IF c5 = 3 AND bidule = 0 THEN cou = 1: GOTO rond2gagne
+      IF c5 = 3 AND bidule = 1 THEN cou = 1: GOTO rond5gagne
+      IF c5 = 3 AND bidule = 2 THEN cou = 1: GOTO rond8gagne
+      IF c6 = 3 AND bidule = 0 THEN cou = 1: GOTO rond3gagne
+      IF c6 = 3 AND bidule = 1 THEN cou = 1: GOTO rond6gagne
+      IF c6 = 3 AND bidule = 2 THEN cou = 1: GOTO rond9gagne
+      IF c8 = 3 AND bidule = 0 THEN cou = 1: GOTO rondgagne
+      IF c8 = 3 AND bidule = 1 THEN cou = 1: GOTO rond5gagne
+      IF c8 = 3 AND bidule = 2 THEN cou = 1: GOTO rond9gagne
+      IF c7 = 3 AND bidule = 0 THEN cou = 1: GOTO rond3gagne
+      IF c7 = 3 AND bidule = 1 THEN cou = 1: GOTO rond5gagne
+      IF c7 = 3 AND bidule = 2 THEN cou = 1: GOTO rond7gagne
+      BEEP
+      LOCATE 2, 2: PRINT "C'est … "; nom2$; " de jouer"
+      LOCATE 6, 2: INPUT "Case ? ", Sylvain3
+      LOCATE 6, 2: PRINT
+      Bidule4 = Sylvain3
+      LOCATE 6, 7: PRINT "  "
+      LOCATE 2, 2: PRINT "         "
+      IF Sylvain3 = 1 THEN x = 85: y = 100: x2 = 185: y2 = 100: c15 = c15 + 1: c12 = c12 + 1: c9 = c9 + 1: GOTO croix
+      IF Sylvain3 = 2 THEN x = 225: y = 100: x2 = 325: y2 = 100: c13 = c13 + 1: c9 = c9 + 1: GOTO croix
+      IF Sylvain3 = 3 THEN x = 360: y = 100: x2 = 460: y2 = 100: c16 = c16 + 1: c14 = c14 + 1: c9 = c9 + 1: GOTO croix
+      IF Sylvain3 = 4 THEN x = 85: y = 200: x2 = 185: y2 = 200: c12 = c12 + 1: c10 = c10 + 1: GOTO croix
+      IF Sylvain3 = 5 THEN x = 225: y = 200: x2 = 325: y2 = 200: c16 = c16 + 1: c15 = c15 + 1: c13 = c13 + 1: c10 = c10 + 1: GOTO croix
+      IF Sylvain3 = 6 THEN x = 360: y = 200: x2 = 460: y2 = 200: c14 = c14 + 1: c10 = c10 + 1: GOTO croix
+      IF Sylvain3 = 7 THEN x = 85: y = 300: x2 = 185: y2 = 300: c16 = c16 + 1: c12 = c12 + 1: c11 = c11 + 1: GOTO croix
+      IF Sylvain3 = 8 THEN x = 225: y = 300: x2 = 325: y2 = 300: c13 = c13 + 1: c11 = c11 + 1: GOTO croix
+      IF Sylvain3 = 9 THEN x = 360: y = 300: x2 = 460: y2 = 300: c15 = c15 + 1: c14 = c14 + 1: c11 = c11 + 1: GOTO croix
+      IF Sylvain3 = 10 GOTO deb
+      IF Sylvain3 = 11 GOTO retour
+      END
+croix:
+      COLOR 2
+      BEEP
+      'x = 85
+      'y = 100
+      PSET (x, y)
+      DRAW "e100"
+      'x = 185
+      'y = 100
+      PSET (x2, y2)
+      DRAW "h100"
+      COLOR 15
+      GOTO condi
+      END
+
+
+rond: BEEP
+      CIRCLE (x, y), 50, cou
+      GOTO condi2
+      END
+rond2:
+      BEEP
+      'x = 275
+      'y = 50
+      CIRCLE (x, y), 50, cou
+      IF F = 0 THEN c = c + 1
+      IF F = 0 THEN c5 = c5 + 1
+      GOTO condi2
+      END
+rond3:
+      BEEP
+      'x = 410
+      'y = 50
+      CIRCLE (x, y), 50, cou
+      IF F = 0 THEN c = c + 1
+      IF F = 0 THEN c6 = c6 + 1
+      IF F = 0 THEN c8 = c8 + 1
+      GOTO condi2
+      END
+rond4:
+      BEEP
+      'x = 130
+      'y = 150
+      CIRCLE (x, y), 50, cou
+      IF F = 0 THEN c2 = c2 + 1
+      IF F = 0 THEN c4 = c4 + 1
+      GOTO condi2
+     
+      END
+rond5:
+      BEEP
+      'x = 275
+      'y = 150
+      CIRCLE (x, y), 50, cou
+      IF F = 0 THEN c2 = c2 + 1
+      IF F = 0 THEN c5 = c5 + 1
+      IF F = 0 THEN c7 = c7 + 1
+      IF F = 0 THEN c8 = c8 + 1
+      GOTO condi2
+      END
+rond6:
+      BEEP
+      'x = 410
+      'y = 150
+      CIRCLE (x, y), 50, cou
+      IF F = 0 THEN c2 = c2 + 1
+      IF F = 0 THEN c6 = c6 + 1
+      GOTO condi2
+      END
+rond7:
+      BEEP
+      IF F = 0 THEN c3 = c3 + 1
+      IF F = 0 THEN c4 = c4 + 1
+      IF F = 0 THEN c8 = c8 + 1
+      'x = 130
+      'y = 250
+      CIRCLE (x, y), 50, cou
+      GOTO condi2
+      END
+
+rond8:
+      BEEP
+      IF F = 0 THEN c3 = c3 + 1
+      IF F = 0 THEN c5 = c5 + 1
+      'x = 275
+      'y = 250
+      CIRCLE (x, y), 50, cou
+      GOTO condi2
+      END
+rond9:
+      BEEP
+      IF F = 0 THEN c3 = c3 + 1
+      IF F = 0 THEN c6 = c6 + 1
+      IF F = 0 THEN c7 = c7 + 1
+      'x = 410
+      'y = 250
+      CIRCLE (x, y), 50, cou
+      GOTO condi2
+      END
+deb:
+
+      F = 0
+      CLS
+      PRINT "Fait par sylvain pajaud"
+      bidule = 0
+      bidule2 = 0
+      c = 0
+      c2 = 0
+      c3 = 0
+      c4 = 0
+      c5 = 0
+      c6 = 0
+      c7 = 0
+      c8 = 0
+      c9 = 0
+      c10 = 0
+      c11 = 0
+      c12 = 0
+      c13 = 0
+      c14 = 0
+      c15 = 0
+      c16 = 0
+      cou = 4
+      x = 200
+      y = 1
+      PSET (x, y)
+      DRAW "d340"
+      x = 350
+      y = 1
+      PSET (x, y)
+      DRAW "d340"
+      x = 75
+      y = 200
+      PSET (x, y)
+      DRAW "r400"
+      x = 75
+      y = 100
+      PSET (x, y)
+      DRAW "r400"
+      IF sylvain$ = nom1$ THEN GOTO condi
+      IF sylvain$ = nom2$ THEN GOTO condi2
+      END
+rondgagne: BEEP
+      IF bidule = 3 THEN bidule = 0: c = 0: c4 = 0: c8 = 0: cou = 0: GOTO condi2
+      bidule = bidule + 1
+      x = 130
+      y = 50
+      CIRCLE (x, y), 50, cou
+      IF bidule = 3 THEN cou = 4
+      IF bidule = 3 GOTO deb
+      GOTO condi2
+      END
+rond2gagne:
+      IF bidule = 3 THEN bidule = 0: c = 0: c5 = 0: cou = 0:  GOTO condi2
+      bidule = bidule + 1
+      BEEP
+      x = 275
+      y = 50
+      CIRCLE (x, y), 50, cou
+      IF bidule = 3 THEN cou = 4
+      IF bidule = 3 GOTO deb
+      GOTO condi2
+      END
+rond3gagne:
+      IF bidule = 3 THEN bidule = 0: c = 0: c6 = 0:  cou = 0: c7 = 0: GOTO condi2
+      bidule = bidule + 1
+      BEEP
+      x = 410
+      y = 50
+      CIRCLE (x, y), 50, cou
+      IF bidule = 3 THEN cou = 4
+      IF bidule = 3 GOTO deb
+      GOTO condi2
+      END
+rond4gagne:
+      IF bidule = 3 THEN bidule = 0: c = 0: c2 = 0: c4 = 0: cou = 0:  GOTO condi2
+      bidule = bidule + 1
+      BEEP
+      x = 130
+      y = 150
+      CIRCLE (x, y), 50, cou
+      IF bidule = 3 THEN cou = 4
+      IF bidule = 3 GOTO deb
+      GOTO condi2
+      END
+rond5gagne:
+      IF bidule = 3 THEN bidule = 0: c2 = 0: c2 = 0: c5 = 0: cou = 0:  c7 = 0: c8 = 0: GOTO condi2
+      bidule = bidule + 1
+      BEEP
+      x = 275
+      y = 150
+      CIRCLE (x, y), 50, cou
+      IF bidule = 3 THEN cou = 4
+      IF bidule = 3 GOTO deb
+      GOTO condi2
+      END
+rond6gagne:
+      IF bidule = 3 THEN bidule = 0: c2 = 0: c6 = 0: cou = 0:  GOTO condi2
+      bidule = bidule + 1
+      BEEP
+      x = 410
+      y = 150
+      CIRCLE (x, y), 50, cou
+      IF bidule = 3 THEN cou = 4
+      IF bidule = 3 GOTO deb
+      GOTO condi2
+      END
+rond7gagne:
+      IF bidule = 3 THEN bidule = 0: c3 = 0: c4 = 0: cou = 0:  c7 = 0: GOTO condi2
+      bidule = bidule + 1
+      BEEP
+      x = 130
+      y = 250
+      CIRCLE (x, y), 50, cou
+      IF bidule = 3 THEN cou = 4
+      IF bidule = 3 GOTO deb
+      GOTO condi2
+      END
+rond8gagne:
+      IF bidule = 3 THEN bidule = 0: c3 = 0: c5 = 0: cou = 0:  GOTO condi2
+      bidule = bidule + 1
+      BEEP
+      x = 275
+      y = 250
+      CIRCLE (x, y), 50, cou
+      IF bidule = 3 THEN cou = 4
+      IF bidule = 3 GOTO deb
+      GOTO condi2
+      END
+rond9gagne:
+      IF bidule = 3 THEN bidule = 0: c3 = 0: c6 = 0: cou = 0:  c8 = 0: GOTO condi2
+      bidule = bidule + 1
+      BEEP
+      x = 410
+      y = 250
+      CIRCLE (x, y), 50, cou
+      IF bidule = 3 THEN cou = 4
+      IF bidule = 3 GOTO deb
+      GOTO condi2
+      END
+croixgagne:
+      IF bidule2 = 3 THEN bidule2 = 0: c9 = 0: c12 = 0: c15 = 0: COLOR 15, 0: GOTO condi
+      bidule2 = bidule2 + 1
+      COLOR 1
+      BEEP
+      x = 85
+      y = 100
+      PSET (x, y)
+      DRAW "e100"
+      x = 185
+      y = 100
+      PSET (x, y)
+      DRAW "h100"
+      COLOR 15
+      IF bidule2 = 3 GOTO deb
+      GOTO condi
+      END
+
+croix2gagne:
+      IF bidule2 = 3 THEN bidule2 = 0: c9 = 0: c13 = 0: COLOR 15, 0: GOTO condi
+      bidule2 = bidule2 + 1
+      BEEP
+      COLOR 1
+      x = 225
+      y = 100
+      PSET (x, y)
+      DRAW "e100"
+      x = 325
+      y = 100
+      PSET (x, y)
+      DRAW "h100"
+      COLOR 15
+      IF bidule2 = 3 GOTO deb
+      GOTO condi
+      END
+croix3gagne:
+      IF bidule2 = 3 THEN bidule2 = 0: c14 = 0: c9 = 0: c16 = 0: COLOR 15, 0: GOTO condi
+      bidule2 = bidule2 + 1
+      BEEP
+      COLOR 1
+      x = 360
+      y = 100
+      PSET (x, y)
+      DRAW "e100"
+      x = 460
+      y = 100
+      PSET (x, y)
+      DRAW "h100"
+      COLOR 15
+      IF bidule2 = 3 GOTO deb
+      GOTO condi
+      END
+croix4gagne:
+      IF bidule2 = 3 THEN bidule2 = 0: c10 = 0: c12 = 0: COLOR 15, 0: GOTO condi
+      bidule2 = bidule2 + 1
+      BEEP
+      COLOR 1
+      x = 85
+      y = 200
+      PSET (x, y)
+      DRAW "e100"
+      x = 185
+      y = 200
+      PSET (x, y)
+      DRAW "h100"
+      COLOR 15
+      IF bidule2 = 3 GOTO deb
+      GOTO condi
+      END
+croix5gagne:
+      IF bidule2 = 3 THEN bidule2 = 0: c10 = 0: c13 = 0: c13 = 0: c15 = 0: c16 = 0: COLOR 15, 0: GOTO condi
+      bidule2 = bidule2 + 1
+      BEEP
+      COLOR 1
+      x = 225
+      y = 200
+      PSET (x, y)
+      DRAW "e100"
+      x = 325
+      y = 200
+      PSET (x, y)
+      DRAW "h100"
+      COLOR 15
+      IF bidule2 = 3 GOTO deb
+      GOTO condi
+      END
+croix6gagne:
+      IF bidule2 = 3 THEN bidule2 = 0: c14 = 0: c10 = 0: COLOR 15, 0: GOTO condi
+      bidule2 = bidule2 + 1
+      BEEP
+      COLOR 1
+      x = 360
+      y = 200
+      PSET (x, y)
+      DRAW "e100"
+      x = 460
+      y = 200
+      PSET (x, y)
+      DRAW "h100"
+      COLOR 15
+      IF bidule2 = 3 GOTO deb
+      GOTO condi
+      END
+croix7gagne:
+      IF bidule2 = 3 THEN bidule2 = 0: c = 0: COLOR 15, 0: GOTO condi
+      bidule2 = bidule2 + 1
+      BEEP
+      COLOR 1
+      x = 85
+      y = 300
+      PSET (x, y)
+      DRAW "e100"
+      x = 185
+      y = 300
+      PSET (x, y)
+      DRAW "h100"
+      COLOR 15
+      IF bidule2 = 3 GOTO deb
+      GOTO condi
+      END
+croix8gagne:
+      IF bidule2 = 3 THEN bidule2 = 0: c11 = 0: c12 = 0: c16 = 0: COLOR 15, 0: GOTO condi
+      bidule2 = bidule2 + 1
+      BEEP
+      COLOR 1
+      x = 225
+      y = 300
+      PSET (x, y)
+      DRAW "e100"
+      x = 325
+      y = 300
+      PSET (x, y)
+      DRAW "h100"
+      IF bidule2 = 3 GOTO deb
+      COLOR 15
+      GOTO condi
+      END
+croix9gagne:
+      IF bidule2 = 3 THEN bidule2 = 0: c11 = 0: c14 = 0: c15 = 0: COLOR 15, 0: GOTO condi
+      bidule2 = bidule2 + 1
+      BEEP
+      COLOR 1
+      x = 360
+      y = 300
+      PSET (x, y)
+      DRAW "e100"
+      x = 460
+      y = 300
+      PSET (x, y)
+      DRAW "h100"
+      COLOR 15
+      IF bidule2 = 3 GOTO deb
+      GOTO condi
+      END
+
+retour:
+       
+       IF Bidule3 = 1 THEN c = c - 1: c4 = c4 - 1: c7 = c7 - 1: GOTO rond.2
+       IF Bidule3 = 2 THEN c = c - 1:  c5 = c5 - 1: GOTO rond2.2
+       IF Bidule3 = 3 THEN c = c - 1: c6 = c6 - 1:  c8 = c8 - 1: GOTO rond3.2
+       IF Bidule3 = 4 THEN c2 = c2 - 1: c4 = c4 - 1: GOTO rond4.2
+       IF Bidule3 = 5 THEN c2 = c2 - 1: c5 = c5 - 1: c7 = c7 - 1: c8 = c8 - 1: GOTO rond5.2
+       IF Bidule3 = 6 THEN c2 = c2 - 1: c6 = c6 - 1: GOTO rond6.2
+       IF Bidule3 = 7 THEN c3 = c3 - 1: c4 = c4 - 1:   c8 = c8 - 1: GOTO rond7.2
+       IF Bidule3 = 8 THEN c3 = c3 - 1: c5 = c5 - 1: GOTO rond8.2
+       IF Bidule3 = 9 THEN c3 = c3 - 1: c6 = c6 - 1: c7 = c7 - 1:   GOTO rond9.2
+       GOTO condi
+       END
+
+
+rond.2: BEEP
+      x = 130
+      y = 50
+      CIRCLE (x, y), 50, 0
+      GOTO condi
+      END
+rond2.2:
+      BEEP
+      x = 275
+      y = 50
+      CIRCLE (x, y), 50, 0
+      GOTO condi
+      END
+rond3.2:
+      BEEP
+      x = 410
+      y = 50
+      CIRCLE (x, y), 50, 0
+      GOTO condi
+      END
+rond4.2:
+      BEEP
+      x = 130
+      y = 150
+      CIRCLE (x, y), 50, 0
+      GOTO condi
+      END
+rond5.2:
+      BEEP
+      x = 275
+      y = 150
+      CIRCLE (x, y), 50, 0
+      GOTO condi
+      END
+rond6.2:
+      BEEP
+      x = 410
+      y = 150
+      CIRCLE (x, y), 50, 0
+      GOTO condi
+      END
+rond7.2:
+      BEEP
+      x = 130
+      y = 250
+      CIRCLE (x, y), 50, 0
+      GOTO condi
+      END
+
+rond8.2:
+      BEEP
+      x = 275
+      y = 250
+      CIRCLE (x, y), 50, 0
+      GOTO condi
+      END
+rond9.2:
+      BEEP
+      x = 410
+      y = 250
+      CIRCLE (x, y), 50, 0
+      GOTO condi
+      END
+
+retour2:
+       IF Bidule4 = 1 THEN c9 = c9 - 1: c12 = c12 - 1: c15 = c15 - 1: GOTO croix.2
+       IF Bidule4 = 2 THEN c9 = c9 - 1: c13 = c13 - 1: GOTO croix2.2
+       IF Bidule4 = 3 THEN c9 = c9 - 1: c14 = c14 - 1: c16 = c16 - 1: GOTO croix3.2
+       IF Bidule4 = 4 THEN c10 = c10 - 1: c12 = c12 - 1: GOTO croix4.2
+       IF Bidule4 = 5 THEN c10 = c10 - 1: c13 = c13 - 1: : c15 = c15 - 1: c16 = c16 - 1: GOTO croix5.2
+       IF Bidule4 = 6 THEN c10 = c10 - 1: c14 = c14 - 11: GOTO croix6.2
+       IF Bidule4 = 7 THEN c11 = c11 - 1: c12 = c12 - 1: c16 = c16 - 1: GOTO croix7.2
+       IF Bidule4 = 8 THEN c11 = c11 - 1:   c13 = c13 - 1:  GOTO croix8.2
+       IF Bidule4 = 9 THEN c11 = c11 - 1: c14 = c14 - 1: c15 = c15 - 1: c16 = c16 - 1: GOTO croix9.2
+       GOTO condi2
+       END
+
+croix.2:
+      COLOR 0
+      c15 = c15 + 1
+      BEEP
+      x = 85
+      y = 100
+      PSET (x, y)
+      DRAW "e100"
+      x = 185
+      y = 100
+      PSET (x, y)
+      DRAW "h100"
+      COLOR 15
+      GOTO condi2
+      END
+
+croix2.2:
+      BEEP
+      COLOR 0
+      x = 225
+      y = 100
+      PSET (x, y)
+      DRAW "e100"
+      x = 325
+      y = 100
+      PSET (x, y)
+        DRAW "h100"
+      COLOR 15
+      GOTO condi2
+      END
+croix3.2:
+      BEEP
+      COLOR 0
+      x = 360
+      y = 100
+      PSET (x, y)
+      DRAW "e100"
+      x = 460
+      y = 100
+      PSET (x, y)
+      DRAW "h100"
+      COLOR 15
+      GOTO condi2
+      END
+croix4.2:
+      BEEP
+      COLOR 0
+      x = 85
+      y = 200
+      PSET (x, y)
+      DRAW "e100"
+      x = 185
+      y = 200
+      PSET (x, y)
+      DRAW "h100"
+      COLOR 15
+      GOTO condi2
+      END
+croix5.2:
+      BEEP
+      COLOR 0
+      x = 225
+      y = 200
+      PSET (x, y)
+      DRAW "e100"
+      x = 325
+      y = 200
+      PSET (x, y)
+      DRAW "h100"
+      COLOR 15
+      GOTO condi2
+      END
+croix6.2:
+      BEEP
+      COLOR 0
+      x = 360
+      y = 200
+      PSET (x, y)
+      DRAW "e100"
+      x = 460
+      y = 200
+      PSET (x, y)
+      DRAW "h100"
+      COLOR 15
+      GOTO condi2
+      END
+croix7.2:
+      BEEP
+      COLOR 0
+      x = 85
+      y = 300
+      PSET (x, y)
+      DRAW "e100"
+      x = 185
+      y = 300
+      PSET (x, y)
+      DRAW "h100"
+      COLOR 15
+      GOTO condi2
+      END
+croix8.2:
+      BEEP
+      COLOR 0
+      x = 225
+      y = 300
+      PSET (x, y)
+      DRAW "e100"
+      x = 325
+      y = 300
+      PSET (x, y)
+      DRAW "h100"
+      COLOR 15
+      GOTO condi2
+      END
+croix9.2:
+      BEEP
+      COLOR 0
+      x = 360
+      y = 300
+      PSET (x, y)
+      DRAW "e100"
+      x = 460
+      y = 300
+      PSET (x, y)
+      DRAW "h100"
+      COLOR 15
+      GOTO condi2
+      END
+

@@ -1,0 +1,110 @@
+          '***************************
+          '         OPERATIONS
+          '***************************
+          SCREEN 9
+deb:
+          CLS
+          COLOR 15, 7
+          x = 2
+          y = 14
+          PSET (x, y)
+          DRAW "c15"
+          DRAW "r450"
+          x = 2
+          y = 15
+          PSET (x, y)
+          DRAW "c7"
+          DRAW "r450"
+          x = 2
+          y = 16
+          PSET (x, y)
+          DRAW "c8"
+          DRAW "r450"
+          x = 450
+          y = 0
+          PSET (x, y)
+          e = 0
+          DRAW "c15"
+          DRAW "d450"
+          x = 451
+          y = 0
+          PSET (x, y)
+          DRAW "c7"
+          DRAW "d450"
+          x = 452
+          y = 0
+          PSET (x, y)
+          DRAW "c8"
+          DRAW "d450"
+          x = 2
+          y = 0
+          PSET (x, y)
+          e = 0
+          DRAW "c15"
+          DRAW "d450"
+          x = 3
+          y = 0
+          PSET (x, y)
+          DRAW "c7"
+          DRAW "d450"
+          x = 617
+          y = 0
+          PSET (x, y)
+          DRAW "c15"
+          DRAW "d450"
+          x = 618
+          y = 0
+          PSET (x, y)
+          DRAW "c7"
+          DRAW "d450"
+          x = 619
+          y = 0
+          PSET (x, y)
+          DRAW "c8"
+          DRAW "d450"
+          x = 4
+          y = 0
+          PSET (x, y)
+          DRAW "c8"
+          DRAW "d450"
+
+          LOCATE 1, 59: PRINT "1 Additions"
+          LOCATE 2, 59: PRINT "2 Multiplications"
+          LOCATE 3, 59: PRINT "3 Soustractions"
+          LOCATE 4, 59: PRINT "4 Divisions"
+          LOCATE 5, 59: PRINT "5 Racines carräs"
+          LOCATE 1, 1
+          LOCATE 1, 2: INPUT "Quel type d'opÇration choisi-tu ? ", o
+          LOCATE 1, 59: PRINT "                 "
+          LOCATE 2, 59: PRINT "                 "
+          LOCATE 3, 59: PRINT "                 "
+          LOCATE 4, 59: PRINT "                 "
+          LOCATE 5, 59: PRINT "                 "
+          LOCATE 1, 2: PRINT "                                   "
+          LOCATE 1, 2: INPUT "Premier nombre ? ", o1
+          LOCATE 1, 2: PRINT "                                   "
+          LOCATE 1, 59: PRINT " "; o1
+          IF o = 5 GOTO ope
+          LOCATE 1, 2: INPUT "Deuxiäme nombre ? ", o2
+ope:      LOCATE 1, 2: PRINT "                                   "
+          IF o = 1 THEN LOCATE 2, 59: PRINT "+"; o2
+          IF o = 2 THEN LOCATE 2, 59: PRINT "X"; o2
+          IF o = 3 THEN LOCATE 2, 59: PRINT "-"; o2
+          IF o = 4 THEN LOCATE 2, 59: PRINT "/"; o2
+          IF o = 1 OR o = 2 OR o = 3 OR o = 4 THEN LOCATE 3, 59: PRINT "_______________"
+          IF o = 5 THEN LOCATE 2, 59: PRINT "_______________"
+          IF o = 1 THEN LOCATE 4, 59: PRINT "="; o1 + o2
+          IF o = 2 THEN LOCATE 4, 59: PRINT "="; o1 * o2
+          IF o = 3 THEN LOCATE 4, 59: PRINT "="; o1 - o2
+          IF o = 4 THEN LOCATE 4, 59: PRINT "="; o1 / o2
+          IF o = 5 THEN LOCATE 3, 59: PRINT "="; SQR(o1)
+          LOCATE 1, 2: PRINT "C Continuer Q Quiter"
+          K$ = ""
+          WHILE K$ = ""
+          K$ = INKEY$
+          IF K$ = "c" THEN K$ = "C"
+          IF K$ = "n" THEN K$ = "N"
+          WEND
+          IF K$ = "C" THEN GOTO deb
+          IF K$ = "Q" THEN END
+

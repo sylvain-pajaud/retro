@@ -1,0 +1,333 @@
+debut:
+        SCREEN 0
+        x = 0
+        pvert3 = 0
+        phor3 = 0
+        pvert4 = 0
+        phor4 = 0
+        DIM finligne(10000)
+        DIM texte(133, 75)
+        CLS
+        COLOR 15, 7
+        PRINT "Щ"; STRING$(78, "Э"); "Л"
+        PRINT "К"; TAB(80); "К"
+        PRINT "Ь"; STRING$(78, "Э"); "Й"
+        PRINT "К"; TAB(80); "К"
+        LOCATE 4, 3: PRINT "<ECHAP Quiter> <TAB Changer la couleur du texte>"
+        PRINT "Ь"; STRING$(78, "Э"); "Й"
+        FOR nb = 0 TO 16
+        PRINT "К"; TAB(80); "К"
+        NEXT nb
+        PRINT "Ш"; STRING$(78, "Э"); "М"
+        COLOR 1, 7
+        LOCATE 6, 79: PRINT STRING$(1, 24);
+        FOR nb = 0 TO 14
+        LOCATE 7 + nb, 79: PRINT "А"
+        NEXT nb
+        LOCATE 22, 79: PRINT STRING$(1, 25);
+        LOCATE 2, 31: COLOR 4, 7: PRINT "Traitement de texte "
+        coul = 0
+saisietexte:
+        'LOCATE 1, 1: PRINT x + 1; pvert4 + 1
+        IF pvert4 > 16 OR x > 0 THEN
+         pcurseur2 = pcurseur
+         pcurseur = INT((x + 1) / (pvert4 + 1) * 14)
+         IF pcurseur2 <> pcurseur THEN
+          FOR nb = 0 TO 14
+          COLOR 1, 7
+          LOCATE 7 + nb, 79: PRINT "А"
+          NEXT nb
+          COLOR 8, 7
+          LOCATE 7 + pcurseur, 79: PRINT "л"
+         END IF
+        END IF
+        IF pvert4 <= 16 AND x = 0 THEN
+         COLOR 1, 7
+         LOCATE 6, 79: PRINT STRING$(1, 24);
+         FOR nb = 0 TO 14
+         LOCATE 7 + nb, 79: PRINT "А"
+         NEXT nb
+         LOCATE 22, 79: PRINT STRING$(1, 25);
+        END IF
+        COLOR coul + 16, 7
+        LOCATE 6 + pvert, 3 + phor: PRINT "Г"
+        COLOR coul, 7
+        k$ = ""
+        WHILE k$ = ""
+        k$ = INKEY$
+        WEND
+        IF finligne(noligne) < phor - 1 THEN finligne(noligne) = phor - 1
+        k = ASC(k$)
+        IF k = 27 THEN END
+        IF k = 9 THEN GOTO couleurtexte
+        IF k = 8 THEN
+         IF phor = finligne(noligne) THEN finligne(noligne) = phor - 2
+         texte(noligne, phor - 1) = 0
+         LOCATE 6 + pvert, 3 + phor: PRINT " "
+         phor = phor - 1
+         phor5 = phor
+         pvert5 = pvert
+         IF phor = -1 AND pvert = 0 THEN phor = 0
+         IF phor = -1 AND pvert > 0 THEN
+          noligne = noligne - 1
+          IF texte(pvert4 - 1, finligne(noligne)) <> 13 THEN phor = finligne(noligne) + 1
+          IF texte(pvert4 - 1, finligne(noligne)) = 13 THEN phor = finligne(noligne)
+          pvert = pvert - 1
+          IF noligne + 1 = pvert4 THEN pvert4 = pvert4 - 1
+         END IF
+         IF x > 0 AND pvert5 = 0 AND phor5 = -1 THEN
+          noligne = noligne - 1
+          IF texte(pvert4 - 1, finligne(noligne)) <> 13 THEN phor = finligne(noligne) + 1
+          IF texte(pvert4 - 1, finligne(noligne)) = 13 THEN phor = finligne(noligne)
+          IF noligne + 1 = pvert4 THEN pvert4 = pvert4 - 1
+          pcurseur2 = pcurseur
+          COLOR 0, 7
+          FOR nb = 0 TO 16
+          LOCATE 6 + nb, 2
+          PRINT TAB(79);
+          NEXT nb
+          COLOR 0, 7
+          x = x - 1
+          GOTO afftexte
+         END IF
+         GOTO saisietexte
+        END IF
+        IF k$ = "8" THEN
+         IF pvert4 > 0 THEN
+          noligne = noligne - 1
+          IF texte(pvert + x, phor) = 13 THEN texte(pvert + x, phor) = 0
+          LOCATE 6 + pvert, 3 + phor: PRINT CHR$(texte(pvert + x, phor))
+          IF phor > finligne(noligne) + 1 THEN phor = finligne(noligne) + 1
+          pvert = pvert - 1
+          IF x > 0 AND pvert = -1 THEN
+           pvert = pvert + 1
+           pcurseur2 = pcurseur
+           COLOR 0, 7
+           FOR nb = 0 TO 16
+           LOCATE 6 + nb, 2
+           PRINT TAB(79);
+           NEXT nb
+           COLOR 0, 7
+           x = x - 1
+           GOTO afftexte
+          END IF
+          GOTO saisietexte
+         END IF
+         GOTO saisietexte
+        END IF
+        IF k$ = "2" THEN
+         IF noligne < pvert4 THEN
+          noligne = noligne + 1
+          IF texte(pvert + x, phor) = 13 THEN texte(pvert + x, phor) = 0
+          LOCATE 6 + pvert, 3 + phor: PRINT CHR$(texte(pvert + x, phor))
+          IF phor > finligne(noligne) + 1 THEN phor = finligne(noligne) + 1
+          IF phor < 0 THEN phor = 0
+          pvert = pvert + 1
+          IF pvert4 > 16 AND noligne - 1 < pvert4 AND pvert = 17 THEN
+           pvert = pvert - 1
+           pcurseur2 = pcurseur
+           COLOR 0, 7
+           FOR nb = 0 TO 16
+           LOCATE 6 + nb, 2
+           PRINT TAB(79);
+           NEXT nb
+           COLOR 0, 7
+           x = x + 1
+           GOTO afftexte
+          END IF
+          GOTO saisietexte
+         END IF
+         GOTO saisietexte
+        END IF
+        IF k$ = "4" THEN
+         IF phor > 0 THEN
+          IF texte(pvert + x, phor) = 13 THEN texte(pvert + x, phor) = 0
+          LOCATE 6 + pvert, 3 + phor: PRINT CHR$(texte(pvert + x, phor))
+          phor = phor - 1
+          GOTO saisietexte
+         END IF
+         IF phor = 0 AND noligne > 0 THEN
+          IF pvert4 > 0 THEN
+           noligne = noligne - 1
+           IF texte(pvert + x, phor) = 13 THEN texte(pvert + x, phor) = 0
+           LOCATE 6 + pvert, 3 + phor: PRINT CHR$(texte(pvert + x, phor))
+           phor = finligne(noligne) + 1
+           pvert = pvert - 1
+           IF x > 0 AND pvert = -1 THEN
+            pvert = pvert + 1
+            pcurseur2 = pcurseur
+            COLOR 0, 7
+            FOR nb = 0 TO 16
+            LOCATE 6 + nb, 2
+            PRINT TAB(79);
+            NEXT nb
+            COLOR 0, 7
+            x = x - 1
+            GOTO afftexte
+           END IF
+           GOTO saisietexte
+          END IF
+          GOTO saisietexte
+         END IF
+         GOTO saisietexte
+        END IF
+        IF k$ = "6" THEN
+         IF phor < finligne(noligne) + 1 AND phor4 <> 0 THEN
+          IF texte(pvert + x, phor) = 13 THEN texte(pvert + x, phor) = 0
+          LOCATE 6 + pvert, 3 + phor: PRINT CHR$(texte(pvert + x, phor))
+          phor = phor + 1
+          GOTO saisietexte
+         END IF
+         IF phor = finligne(noligne) + 1 AND phor4 <> 0 THEN
+          IF noligne < pvert4 THEN
+           noligne = noligne + 1
+           IF texte(pvert + x, phor) = 13 THEN texte(pvert + x, phor) = 0
+           LOCATE 6 + pvert, 3 + phor: PRINT CHR$(texte(pvert + x, phor))
+           phor = 0
+           pvert = pvert + 1
+           IF pvert4 > 16 AND noligne - 1 < pvert4 AND pvert = 17 THEN
+            pvert = pvert - 1
+            pcurseur2 = pcurseur
+            COLOR 0, 7
+            FOR nb = 0 TO 16
+            LOCATE 6 + nb, 2
+            PRINT TAB(79);
+            NEXT nb
+            COLOR 0, 7
+            x = x + 1
+            GOTO afftexte
+           END IF
+           GOTO saisietexte
+          END IF
+          GOTO saisietexte
+         END IF
+         GOTO saisietexte
+        END IF
+        IF k$ = "7" THEN
+         IF texte(pvert + x, phor) = 13 THEN texte(pvert + x, phor) = 0
+         LOCATE 6 + pvert, 3 + phor: PRINT CHR$(texte(pvert + x, phor))
+         phor = 0
+         GOTO saisietexte
+        END IF
+        IF k$ = "1" THEN
+         IF texte(pvert + x, phor) = 13 THEN texte(pvert + x, phor) = 0
+         LOCATE 6 + pvert, 3 + phor: PRINT CHR$(texte(pvert + x, phor))
+         phor = finligne(noligne) + 1
+         GOTO saisietexte
+        END IF
+        texte(noligne, phor) = k
+        IF k = 13 THEN
+         LOCATE 6 + pvert, 3 + phor: PRINT " "
+         IF phor = 0 THEN finligne(noligne) = 0
+         phor = 0
+         IF noligne = pvert4 THEN pvert4 = pvert4 + 1
+         pvert = pvert + 1
+         noligne = noligne + 1
+         IF pvert > 16 THEN x = x + 1
+         IF x > 0 THEN
+          COLOR 7, 1
+          LOCATE 6, 79: PRINT STRING$(1, 24);
+          LOCATE 22, 79: PRINT STRING$(1, 25);
+          IF pvert > 16 THEN
+           pvert = pvert - 1
+           COLOR 0, 7
+           FOR nb = 0 TO 16
+           LOCATE 6 + nb, 2
+           PRINT TAB(79);
+           NEXT nb
+           COLOR 0, 7
+           GOTO afftexte
+          END IF
+         END IF
+         GOTO saisietexte
+        END IF
+        LOCATE 6 + pvert, 3 + phor
+        PRINT k$
+        'PRINT k
+        phor = phor + 1
+        phor4 = phor4 + 1
+        IF phor = 75 THEN
+         finligne(noligne) = phor - 1
+         phor = 0
+         pvert = pvert + 1
+         pvert4 = pvert4 + 1
+         noligne = noligne + 1
+        END IF
+        GOTO saisietexte
+couleurtexte:
+        LOCATE 4, 3: PRINT "                                          "
+        LOCATE 4, 4: COLOR 0: PRINT "A лл"
+        LOCATE 4, 9: COLOR 1: PRINT "B лл"
+        LOCATE 4, 14: COLOR 2: PRINT "C лл"
+        LOCATE 4, 19: COLOR 3: PRINT "D лл"
+        LOCATE 4, 24: COLOR 4: PRINT "E лл"
+        LOCATE 4, 29: COLOR 5: PRINT "F лл"
+        LOCATE 4, 34: COLOR 6: PRINT "G лл"
+        LOCATE 4, 39: COLOR 8: PRINT "H лл"
+        LOCATE 4, 44: COLOR 9: PRINT "I лл"
+        LOCATE 4, 49: COLOR 10: PRINT "J лл"
+        LOCATE 4, 54: COLOR 11: PRINT "K лл"
+        LOCATE 4, 59: COLOR 12: PRINT "L лл"
+        LOCATE 4, 64: COLOR 13: PRINT "M лл"
+        LOCATE 4, 69: COLOR 14: PRINT "N лл"
+        LOCATE 4, 74: COLOR 15: PRINT "O лл"
+        COLOR 15, 7
+        k$ = ""
+        WHILE k$ = ""
+        k$ = INKEY$
+        WEND
+        k = ASC(k$)
+        IF k = 27 THEN GOTO sortiecouleur
+        IF k$ = "a" THEN k$ = "A"
+        IF k$ = "A" THEN coul = 0
+        IF k$ = "b" THEN k$ = "B"
+        IF k$ = "B" THEN coul = 1
+        IF k$ = "c" THEN k$ = "C"
+        IF k$ = "C" THEN coul = 2
+        IF k$ = "d" THEN k$ = "D"
+        IF k$ = "D" THEN coul = 3
+        IF k$ = "e" THEN k$ = "E"
+        IF k$ = "E" THEN coul = 4
+        IF k$ = "f" THEN k$ = "F"
+        IF k$ = "F" THEN coul = 5
+        IF k$ = "g" THEN k$ = "G"
+        IF k$ = "G" THEN coul = 6
+        IF k$ = "h" THEN k$ = "H"
+        IF k$ = "H" THEN coul = 8
+        IF k$ = "i" THEN k$ = "I"
+        IF k$ = "I" THEN coul = 9
+        IF k$ = "j" THEN k$ = "J"
+        IF k$ = "J" THEN coul = 10
+        IF k$ = "k" THEN k$ = "K"
+        IF k$ = "K" THEN coul = 11
+        IF k$ = "l" THEN k$ = "L"
+        IF k$ = "L" THEN coul = 12
+        IF k$ = "m" THEN k$ = "M"
+        IF k$ = "M" THEN coul = 13
+        IF k$ = "n" THEN k$ = "N"
+        IF k$ = "N" THEN coul = 14
+        IF k$ = "o" THEN k$ = "O"
+        IF k$ = "O" THEN coul = 15
+        IF k$ = "A" OR k$ = "B" OR k$ = "C" OR k$ = "D" OR k$ = "E" OR k$ = "F" OR k$ = "G" OR k$ = "H" OR k$ = "I" OR k$ = "J" OR k$ = "K" OR k$ = "L" OR k$ = "M" OR k$ = "N" OR k$ = "O" THEN
+sortiecouleur:
+         LOCATE 4, 3: PRINT TAB(80);
+         LOCATE 4, 3: PRINT "<ECHAP> Fonctions"
+         GOTO saisietexte
+        ELSE
+         GOTO couleurtexte
+        END IF
+afftexte: 
+        'CLS
+        pvert3 = 0
+        phor3 = 0
+        FOR pvert2 = x TO x + 16
+        FOR phor2 = 0 TO 75
+        LOCATE pvert3 + 6, phor3 + 3: PRINT CHR$(texte(pvert2, phor2))
+        phor3 = phor3 + 1
+        NEXT phor2
+        phor3 = 0
+        pvert3 = pvert3 + 1
+        NEXT pvert2
+        'x = x + 1
+        GOTO saisietexte
+

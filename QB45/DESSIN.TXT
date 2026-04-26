@@ -1,0 +1,890 @@
+
+
+                     SCREEN 9
+                     CLS
+                     ab = 0
+                     v = 0
+                     A = 0
+                     p = 1
+                     e = 1
+                     g = 1
+                     IF e = 1 THEN CLS
+                     e = 0
+                     x = 2
+                     y = 14
+                     PSET (x, y)
+                     DRAW "c15"
+                     DRAW "r450"
+                     x = 2
+                     y = 15
+                     PSET (x, y)
+                     DRAW "c7"
+                     DRAW "r450"
+                     x = 2
+                     y = 16
+                     PSET (x, y)
+                     DRAW "c8"
+                     DRAW "r450"
+                     x = 450
+                     y = 0
+                     PSET (x, y)
+                     e = 0
+                     DRAW "c15"
+                     DRAW "d450"
+                     x = 451
+                     y = 0
+                     PSET (x, y)
+                     DRAW "c7"
+                     DRAW "d450"
+                     x = 452
+                     y = 0
+                     PSET (x, y)
+                     DRAW "c8"
+                     DRAW "d450"
+                     x = 2
+                     y = 0
+                     PSET (x, y)
+                     e = 0
+                     DRAW "c15"
+                     DRAW "d450"
+                     x = 3
+                     y = 0
+                     PSET (x, y)
+                     DRAW "c7"
+                     DRAW "d450"
+                     x = 617
+                     y = 0
+                     PSET (x, y)
+                     DRAW "c15"
+                     DRAW "d450"
+                     x = 618
+                     y = 0
+                     PSET (x, y)
+                     e = 0
+                     DRAW "c7"
+                     DRAW "d450"
+                     x = 619
+                     y = 0
+                     PSET (x, y)
+                     DRAW "c8"
+                     DRAW "d450"
+                     x = 4
+                     y = 0
+                     PSET (x, y)
+                     DRAW "c8"
+                     DRAW "d450"
+                     x = 453
+                     COLOR 1, 0
+                     LOCATE 1, 60: PRINT "1 Bleu"
+                     COLOR 2, 0
+                     LOCATE 2, 60: PRINT "2 Vert"
+                     COLOR 3, 0
+                     LOCATE 3, 60: PRINT "3 Cyan"
+                     COLOR 4, 0
+                     LOCATE 4, 60: PRINT "4 Rouge"
+                     COLOR 5, 0
+                     LOCATE 5, 60: PRINT "5 Violet"
+                     COLOR 6, 0
+                     LOCATE 6, 60: PRINT "6 Marron"
+                     COLOR 15, 0
+                     LOCATE 7, 60: PRINT "7 Blanc"
+                     COLOR 8, 0
+                     LOCATE 8, 60: PRINT "8 Gris"
+                     COLOR 9, 0
+                     LOCATE 9, 60: PRINT "9 Bleu clair"
+                     COLOR 10, 0
+                     LOCATE 10, 60: PRINT "10 Vert clair"
+                     COLOR 11, 0
+                     LOCATE 11, 60: PRINT "11 Cyan clair"
+                     COLOR 12, 0
+                     LOCATE 12, 60: PRINT "12 Rouge clair"
+                     COLOR 13, 0
+                     LOCATE 13, 60: PRINT "13 Violet clair"
+                     COLOR 14, 0
+                     LOCATE 14, 60: PRINT "14 Jaune"
+                     COLOR 15, 0
+                     LOCATE 15, 60: PRINT "15 Blanc brillant"
+                     COLOR 15, 7
+                     LOCATE 1, 2: INPUT "Couleur de fond ", c
+                     CLS
+                     x = 450
+                     y = 0
+                     PSET (x, y)
+                     IF c = 1 THEN DRAW "c1"
+                     IF c = 2 THEN DRAW "c2"
+                     IF c = 3 THEN DRAW "c3"
+                     IF c = 4 THEN DRAW "c4"
+                     IF c = 5 THEN DRAW "c5"
+                     IF c = 6 THEN DRAW "c6"
+                     IF c = 7 THEN DRAW "c7"
+                     IF c = 8 THEN DRAW "c8"
+                     IF c = 9 THEN DRAW "c9"
+                     IF c = 10 THEN DRAW "c10"
+                     IF c = 11 THEN DRAW "c11"
+                     IF c = 12 THEN DRAW "c12"
+                     IF c = 13 THEN DRAW "c13"
+                     IF c = 14 THEN DRAW "c14"
+                     IF c = 15 THEN DRAW "c15"
+                     DRAW "d450"
+                     x = 620
+                     y = 0
+                     PSET (x, y), c
+                     DRAW "d540"
+                     x = 2
+                     y = 0
+                     PSET (x, y), c
+                     DRAW "d450"
+                     x = 2
+                     y = 16
+                     PSET (x, y), c
+                     DRAW "r450"
+                     x = 100
+                     y = 100
+                     PAINT (x, y), c
+                     x = 621
+                     y = 0
+                     PAINT (x, y), c
+                     x = 2
+                     y = 14
+                     PSET (x, y)
+                     DRAW "c15"
+                     DRAW "r450"
+                     x = 2
+                     y = 15
+                     PSET (x, y)
+                     DRAW "c7"
+                     DRAW "r450"
+                     x = 2
+                     y = 16
+                     PSET (x, y)
+                     DRAW "c8"
+                     DRAW "r450"
+                     x = 450
+                     y = 0
+                     PSET (x, y)
+                     e = 0
+                     DRAW "c15"
+                     DRAW "d450"
+                     x = 451
+                     y = 0
+                     PSET (x, y)
+                     DRAW "c7"
+                     DRAW "d450"
+                     x = 452
+                     y = 0
+                     PSET (x, y)
+                     DRAW "c8"
+                     DRAW "d450"
+                     x = 2
+                     y = 0
+                     PSET (x, y)
+                     e = 0
+                     DRAW "c15"
+                     DRAW "d450"
+                     x = 3
+                     y = 0
+                     PSET (x, y)
+                     DRAW "c7"
+                     DRAW "d450"
+                     x = 617
+                     y = 0
+                     PSET (x, y)
+                     DRAW "c15"
+                     DRAW "d450"
+                     x = 618
+                     y = 0
+                     PSET (x, y)
+                     e = 0
+                     DRAW "c7"
+                     DRAW "d450"
+                     x = 619
+                     y = 0
+                     PSET (x, y)
+                     DRAW "c8"
+                     DRAW "d450"
+                     x = 4
+                     y = 0
+                     PSET (x, y)
+                     DRAW "c8"
+                     DRAW "d450"
+                     x = 453
+                     LOCATE 1, 60: PRINT "1 Trait"
+                     LOCATE 2, 60: PRINT "2 Cercle"
+                     LOCATE 1, 2: INPUT "Forme ? ", f$
+                     LOCATE 1, 2: PRINT "                       "
+                     CLS
+                     IF f$ = "1" THEN abc = 0
+                     IF f$ = "2" THEN abc = 1
+                     IF f$ = "1" THEN GOTO des3
+                     IF f$ = "2" THEN GOTO cercle
+cercle:
+                     x = 450
+                     y = 0
+                     PSET (x, y)
+                     IF c = 1 THEN DRAW "c1"
+                     IF c = 2 THEN DRAW "c2"
+                     IF c = 3 THEN DRAW "c3"
+                     IF c = 4 THEN DRAW "c4"
+                     IF c = 5 THEN DRAW "c5"
+                     IF c = 6 THEN DRAW "c6"
+                     IF c = 7 THEN DRAW "c7"
+                     IF c = 8 THEN DRAW "c8"
+                     IF c = 9 THEN DRAW "c9"
+                     IF c = 10 THEN DRAW "c10"
+                     IF c = 11 THEN DRAW "c11"
+                     IF c = 12 THEN DRAW "c12"
+                     IF c = 13 THEN DRAW "c13"
+                     IF c = 14 THEN DRAW "c14"
+                     IF c = 15 THEN DRAW "c15"
+                     DRAW "d450"
+                     x = 620
+                     y = 0
+                     PSET (x, y), c
+                     DRAW "d540"
+                     x = 2
+                     y = 0
+                     PSET (x, y), c
+                     DRAW "d450"
+                     x = 2
+                     y = 16
+                     PSET (x, y), c
+                     DRAW "r450"
+                     x = 100
+                     y = 100
+                     IF ab = 0 THEN PAINT (x, y), c
+                     x = 621
+                     y = 0
+                     IF ab = 0 THEN PAINT (x, y), c
+                     x = 2
+                     y = 14
+                     ab = ab + 1
+                     PSET (x, y)
+                     DRAW "c15"
+                     DRAW "r450"
+                     x = 2
+                     y = 15
+                     PSET (x, y)
+                     DRAW "c7"
+                     DRAW "r450"
+                     x = 2
+                     y = 16
+                     PSET (x, y)
+                     DRAW "c8"
+                     DRAW "r450"
+                     x = 450
+                     y = 0
+                     PSET (x, y)
+                     e = 0
+                     DRAW "c15"
+                     DRAW "d450"
+                     x = 451
+                     y = 0
+                     PSET (x, y)
+                     DRAW "c7"
+                     DRAW "d450"
+                     x = 452
+                     y = 0
+                     PSET (x, y)
+                     DRAW "c8"
+                     DRAW "d450"
+                     x = 2
+                     y = 0
+                     PSET (x, y)
+                     e = 0
+                     DRAW "c15"
+                     DRAW "d450"
+                     x = 3
+                     y = 0
+                     PSET (x, y)
+                     DRAW "c7"
+                     DRAW "d450"
+                     x = 617
+                     y = 0
+                     PSET (x, y)
+                     DRAW "c15"
+                     DRAW "d450"
+                     x = 618
+                     y = 0
+                     PSET (x, y)
+                     e = 0
+                     DRAW "c7"
+                     DRAW "d450"
+                     x = 619
+                     y = 0
+                     PSET (x, y)
+                     DRAW "c8"
+                     DRAW "d450"
+                     x = 4
+                     y = 0
+                     PSET (x, y)
+                     DRAW "c8"
+                     DRAW "d450"
+                     x = 453
+                     LOCATE 16, 60: PRINT "                 "
+                     LOCATE 17, 60: PRINT "                 "
+                     LOCATE 18, 60: PRINT "                 "
+                     LOCATE 19, 60: PRINT "                 "
+                     LOCATE 20, 60: PRINT "                 "
+                     LOCATE 21, 60: PRINT "                 "
+                     LOCATE 22, 60: PRINT "                 "
+                     LOCATE 23, 60: PRINT "                 "
+deb1:
+                     GOTO des
+deb2:
+                     LOCATE 1, 2: INPUT "Couleur ", cou
+                     LOCATE 1, 2: PRINT "                       "
+                     LOCATE 1, 2: INPUT "Rayon ", r
+                     LOCATE 1, 2: PRINT "                       "
+                     CIRCLE (x, y), r, cou
+                     PSET (x, y)
+                     IF c = 1 THEN DRAW "c1"
+                     IF c = 2 THEN DRAW "c2"
+                     IF c = 3 THEN DRAW "c3"
+                     IF c = 4 THEN DRAW "c4"
+                     IF c = 5 THEN DRAW "c5"
+                     IF c = 6 THEN DRAW "c6"
+                     IF c = 7 THEN DRAW "c7"
+                     IF c = 8 THEN DRAW "c8"
+                     IF c = 9 THEN DRAW "c9"
+                     IF c = 10 THEN DRAW "c10"
+                     IF c = 11 THEN DRAW "c11"
+                     IF c = 12 THEN DRAW "c12"
+                     IF c = 13 THEN DRAW "c13"
+                     IF c = 14 THEN DRAW "c14"
+                     IF c = 15 THEN DRAW "c15"
+                     DRAW "u"
+
+cercle2:
+                     abc = 0
+                     LOCATE 1, 2: PRINT "Q Quiter C Continuer J Changer forme R Remplir "
+                     k$ = ""
+                     WHILE k$ = ""
+                     k$ = INKEY$
+                     IF k$ = "c" THEN k$ = "C"
+                     IF k$ = "q" THEN k$ = "Q"
+                     IF k$ = "r" THEN k$ = "R"
+                     IF k$ = "j" THEN k$ = "J"
+                     WEND
+                     IF k$ = "C" OR k$ = "Q" OR k$ = "R" OR k$ = "J" THEN LOCATE 1, 2: PRINT "                                                   "
+                     IF k$ = "J" THEN p = 1
+                     IF k$ = "C" THEN abc = 1
+                     IF k$ = "C" THEN GOTO deb1
+                     IF k$ = "Q" THEN END ELSE
+                     IF k$ = "R" THEN GOTO remplissagerond
+                     IF k$ = "J" THEN GOTO des3 ELSE GOTO cercle2
+
+remplissage:
+                     LOCATE 1, 60: PRINT "A Bleu"
+                     COLOR 2, c
+                     LOCATE 2, 60: PRINT "B Vert"
+                     COLOR 3, c
+                     LOCATE 3, 60: PRINT "C Cyan"
+                     COLOR 4, c
+                     LOCATE 4, 60: PRINT "D Rouge"
+                     COLOR 5, c
+                     LOCATE 5, 60: PRINT "E Violet"
+                     COLOR 6, c
+                     LOCATE 6, 60: PRINT "F Marron"
+                     COLOR 15, c
+                     LOCATE 7, 60: PRINT "G Blanc"
+                     COLOR 8, c
+                     LOCATE 8, 60: PRINT "H Gris"
+                     COLOR 9, c
+                     LOCATE 9, 60: PRINT "I Bleu clair"
+                     COLOR 10, c
+                     LOCATE 10, 60: PRINT "J Vert clair"
+                     COLOR 11, c
+                     LOCATE 11, 60: PRINT "K Cyan clair"
+                     COLOR 12, c
+                     LOCATE 12, 60: PRINT "L Rouge clair"
+                     COLOR 13, c
+                     LOCATE 13, 60: PRINT "M Violet clair"
+                     COLOR 14, c
+                     LOCATE 14, 60: PRINT "N Jaune"
+                     COLOR 15, c
+                     LOCATE 15, 60: PRINT "O Blanc brillant"
+                     LOCATE 1, 2: PRINT "                                                     "
+                     LOCATE 1, 2: INPUT "Couleur ? ", cou
+                     LOCATE 1, 2: PRINT "                       "
+                     LOCATE 1, 2: INPUT "Position Horizontale de l'endroit ", x
+                     LOCATE 1, 2: PRINT "                                     "
+                     LOCATE 1, 2: INPUT "Position Verticale de l'endroit ", y
+                     LOCATE 1, 2: PRINT "                                   "
+                     PAINT (x, y), cou
+                     p = 1
+re2:
+                     LOCATE 1, 2: PRINT "Q Quiter C Continuer J Changer forme R Remplir "
+                     k$ = ""
+                     WHILE k$ = ""
+                     k$ = INKEY$
+                     IF k$ = "c" THEN k$ = "C"
+                     IF k$ = "q" THEN k$ = "Q"
+                     IF k$ = "r" THEN k$ = "R"
+                     IF k$ = "j" THEN k$ = "J"
+                     WEND
+                     IF k$ = "C" OR k$ = "Q" OR k$ = "R" OR k$ = "J" THEN LOCATE 1, 2: PRINT "                                                   "
+                     IF k$ = "C" THEN GOTO des3
+                     IF k$ = "Q" THEN END
+                     IF k$ = "R" THEN GOTO remplissage
+                     IF k$ = "J" THEN GOTO cercle ELSE GOTO des4
+                     END
+remplissagerond:
+                     PAINT (x, y), cou
+                     LOCATE 1, 2: PRINT "Q Quiter C Continuer J Changer forme R Remplir "
+                     k$ = ""
+                     WHILE k$ = ""
+                     k$ = INKEY$
+                     IF k$ = "c" THEN k$ = "C"
+                     IF k$ = "q" THEN k$ = "Q"
+                     IF k$ = "r" THEN k$ = "R"
+                     IF k$ = "j" THEN k$ = "J"
+                     WEND
+                     IF k$ = "C" OR k$ = "Q" OR k$ = "R" OR k$ = "J" THEN LOCATE 1, 2: PRINT "                                                   "
+                     IF k$ = "J" THEN p = 1
+                     IF k$ = "C" THEN GOTO deb2
+                     IF k$ = "Q" THEN END ELSE
+                     IF k$ = "R" THEN GOTO remplissagerond
+                     IF k$ = "J" THEN GOTO des3 ELSE GOTO cercle2
+                     END
+
+des:
+                     x = 20
+                     y = 20
+                     A = 20
+                     B = 20
+                     LOCATE 1, 2: PRINT "Choisisser un point puis appuyer sur 0"
+des2:
+                     
+                     LOCATE 1, 60: PRINT x
+                     LOCATE 2, 60: PRINT y
+                     k2$ = INKEY$
+                     PSET (x, y)
+                     IF k2$ = "2" THEN DRAW "c15"
+                     IF k2$ = "2" THEN DRAW "d1"
+                     IF k2$ = "2" THEN y = y + 5
+                     PSET (A, B)
+                     IF c = 1 THEN DRAW "c1"
+                     IF c = 2 THEN DRAW "c2"
+                     IF c = 3 THEN DRAW "c3"
+                     IF c = 4 THEN DRAW "c4"
+                     IF c = 5 THEN DRAW "c5"
+                     IF c = 6 THEN DRAW "c6"
+                     IF c = 7 THEN DRAW "c7"
+                     IF c = 8 THEN DRAW "c8"
+                     IF c = 9 THEN DRAW "c9"
+                     IF c = 10 THEN DRAW "c10"
+                     IF c = 11 THEN DRAW "c11"
+                     IF c = 12 THEN DRAW "c12"
+                     IF c = 13 THEN DRAW "c13"
+                     IF c = 14 THEN DRAW "c14"
+                     IF c = 15 THEN DRAW "c15"
+                     IF k2$ = "2" THEN DRAW "d1"
+                     IF k2$ = "2" THEN B = B + 5
+                     IF k2$ = "6" THEN DRAW "c15"
+                     IF k2$ = "6" THEN DRAW "r1"
+                     IF k2$ = "6" THEN x = x + 5
+                     PSET (A, B)
+                     IF c = 1 THEN DRAW "c1"
+                     IF c = 2 THEN DRAW "c2"
+                     IF c = 3 THEN DRAW "c3"
+                     IF c = 4 THEN DRAW "c4"
+                     IF c = 5 THEN DRAW "c5"
+                     IF c = 6 THEN DRAW "c6"
+                     IF c = 7 THEN DRAW "c7"
+                     IF c = 8 THEN DRAW "c8"
+                     IF c = 9 THEN DRAW "c9"
+                     IF c = 10 THEN DRAW "c10"
+                     IF c = 11 THEN DRAW "c11"
+                     IF c = 12 THEN DRAW "c12"
+                     IF c = 13 THEN DRAW "c13"
+                     IF c = 14 THEN DRAW "c14"
+                     IF c = 15 THEN DRAW "c15"
+                     IF k2$ = "6" THEN DRAW "r1"
+                     IF k2$ = "6" THEN A = A + 5
+                     IF k2$ = "8" THEN DRAW "c15"
+                     IF k2$ = "8" THEN DRAW "u1"
+                     IF k2$ = "8" THEN y = y - 5
+                     PSET (A, B)
+                     IF c = 1 THEN DRAW "c1"
+                     IF c = 2 THEN DRAW "c2"
+                     IF c = 3 THEN DRAW "c3"
+                     IF c = 4 THEN DRAW "c4"
+                     IF c = 5 THEN DRAW "c5"
+                     IF c = 6 THEN DRAW "c6"
+                     IF c = 7 THEN DRAW "c7"
+                     IF c = 8 THEN DRAW "c8"
+                     IF c = 9 THEN DRAW "c9"
+                     IF c = 10 THEN DRAW "c10"
+                     IF c = 11 THEN DRAW "c11"
+                     IF c = 12 THEN DRAW "c12"
+                     IF c = 13 THEN DRAW "c13"
+                     IF c = 14 THEN DRAW "c14"
+                     IF c = 15 THEN DRAW "c15"
+                     IF k2$ = "8" THEN DRAW "u1"
+                     IF k2$ = "8" THEN B = B - 5
+                     IF k2$ = "4" THEN DRAW "c15"
+                     IF k2$ = "4" THEN DRAW "l1"
+                     IF k2$ = "4" THEN x = x - 5
+                     PSET (A, B)
+                     IF c = 1 THEN DRAW "c1"
+                     IF c = 2 THEN DRAW "c2"
+                     IF c = 3 THEN DRAW "c3"
+                     IF c = 4 THEN DRAW "c4"
+                     IF c = 5 THEN DRAW "c5"
+                     IF c = 6 THEN DRAW "c6"
+                     IF c = 7 THEN DRAW "c7"
+                     IF c = 8 THEN DRAW "c8"
+                     IF c = 9 THEN DRAW "c9"
+                     IF c = 10 THEN DRAW "c10"
+                     IF c = 11 THEN DRAW "c11"
+                     IF c = 12 THEN DRAW "c12"
+                     IF c = 13 THEN DRAW "c13"
+                     IF c = 14 THEN DRAW "c14"
+                     IF c = 15 THEN DRAW "c15"
+                     IF k2$ = "4" THEN DRAW "l1"
+                     IF k2$ = "4" THEN A = A - 5
+                     IF k2$ = "0" THEN LOCATE 1, 2: PRINT "                                       "
+                     IF abc = 0 AND k2$ = "0" OR f$ = "1" AND k2$ = "0" THEN A = 0
+                     IF abc = 0 AND k2$ = "0" OR f$ = "1" AND k2$ = "0" THEN B = 0
+                     IF abc = 0 AND k2$ = "0" OR f$ = "1" AND k2$ = "0" THEN GOTO des5
+                     IF f$ = "2" AND k2$ = "0" OR abc = 1 AND k2$ = "0" THEN A = 0
+                     IF f$ = "2" AND k2$ = "0" OR abc = 1 AND k2$ = "0" THEN B = 0
+                     IF f$ = "2" AND k2$ = "0" OR abc = 1 AND k2$ = "0" THEN GOTO deb2
+                     k2$ = ""
+                     GOTO des2
+des3:       
+                     GOTO des
+                     x = 450
+                     y = 0
+                     PSET (x, y)
+                     IF c = 1 THEN DRAW "c1"
+                     IF c = 2 THEN DRAW "c2"
+                     IF c = 3 THEN DRAW "c3"
+                     IF c = 4 THEN DRAW "c4"
+                     IF c = 5 THEN DRAW "c5"
+                     IF c = 6 THEN DRAW "c6"
+                     IF c = 7 THEN DRAW "c7"
+                     IF c = 8 THEN DRAW "c8"
+                     IF c = 9 THEN DRAW "c9"
+                     IF c = 10 THEN DRAW "c10"
+                     IF c = 11 THEN DRAW "c11"
+                     IF c = 12 THEN DRAW "c12"
+                     IF c = 13 THEN DRAW "c13"
+                     IF c = 14 THEN DRAW "c14"
+                     IF c = 15 THEN DRAW "c15"
+                     DRAW "d450"
+                     x = 620
+                     y = 0
+                     PSET (x, y), c
+                     DRAW "d540"
+                     x = 2
+                     y = 0
+                     PSET (x, y), c
+                     DRAW "d450"
+                     x = 2
+                     y = 16
+                     PSET (x, y), c
+                     DRAW "r450"
+                     x = 100
+                     y = 100
+                     IF ab = 0 THEN PAINT (x, y), c
+                     x = 621
+                     y = 0
+                     IF ab = 0 THEN PAINT (x, y), c
+                     ab = ab + 1
+                     x = 2
+                     y = 14
+                     PSET (x, y)
+                     DRAW "c15"
+                     DRAW "r450"
+                     x = 2
+                     y = 15
+                     PSET (x, y)
+                     DRAW "c7"
+                     DRAW "r450"
+                     x = 2
+                     y = 16
+                     PSET (x, y)
+                     DRAW "c8"
+                     DRAW "r450"
+                     x = 450
+                     y = 0
+                     PSET (x, y)
+                     e = 0
+                     DRAW "c15"
+                     DRAW "d450"
+                     x = 451
+                     y = 0
+                     PSET (x, y)
+                     DRAW "c7"
+                     DRAW "d450"
+                     x = 452
+                     y = 0
+                     PSET (x, y)
+                     DRAW "c8"
+                     DRAW "d450"
+                     x = 2
+                     y = 0
+                     PSET (x, y)
+                     e = 0
+                     DRAW "c15"
+                     DRAW "d450"
+                     x = 3
+                     y = 0
+                     PSET (x, y)
+                     DRAW "c7"
+                     DRAW "d450"
+                     x = 617
+                     y = 0
+                     PSET (x, y)
+                     DRAW "c15"
+                     DRAW "d450"
+                     x = 618
+                     y = 0
+                     PSET (x, y)
+                     e = 0
+                     DRAW "c7"
+                     DRAW "d450"
+                     x = 619
+                     y = 0
+                     PSET (x, y)
+                     DRAW "c8"
+                     DRAW "d450"
+                     x = 4
+                     y = 0
+                     PSET (x, y)
+                     DRAW "c8"
+                     DRAW "d450"
+                     x = 453
+                     GOTO des
+des4:              
+                     LOCATE 1, 2: PRINT "Q Quiter J Changer forme R Remplir 0 Changer Couleur"
+dess:
+                     LOCATE 1, 60: PRINT x
+                     LOCATE 2, 60: PRINT y
+                     k2$ = INKEY$
+                     PSET (x, y)
+                     IF k3$ = "A" THEN DRAW "c1"
+                     IF k3$ = "B" THEN DRAW "c2"
+                     IF k3$ = "C" THEN DRAW "c3"
+                     IF k3$ = "D" THEN DRAW "c4"
+                     IF k3$ = "E" THEN DRAW "c5"
+                     IF k3$ = "F" THEN DRAW "c6"
+                     IF k3$ = "G" THEN DRAW "c7"
+                     IF k3$ = "H" THEN DRAW "c8"
+                     IF k3$ = "I" THEN DRAW "c9"
+                     IF k3$ = "J" THEN DRAW "c10"
+                     IF k3$ = "K" THEN DRAW "c11"
+                     IF k3$ = "L" THEN DRAW "c12"
+                     IF k3$ = "M" THEN DRAW "c13"
+                     IF k3$ = "N" THEN DRAW "c14"
+                     IF k3$ = "O" THEN DRAW "c15"
+                     IF k2$ = "2" THEN y = y + 5
+                     IF k2$ = "2" THEN DRAW "d5"
+                     PSET (x, y)
+                     IF k3$ = "A" THEN DRAW "c1"
+                     IF k3$ = "B" THEN DRAW "c2"
+                     IF k3$ = "C" THEN DRAW "c3"
+                     IF k3$ = "D" THEN DRAW "c4"
+                     IF k3$ = "E" THEN DRAW "c5"
+                     IF k3$ = "F" THEN DRAW "c6"
+                     IF k3$ = "G" THEN DRAW "c7"
+                     IF k3$ = "H" THEN DRAW "c8"
+                     IF k3$ = "I" THEN DRAW "c9"
+                     IF k3$ = "J" THEN DRAW "c10"
+                     IF k3$ = "K" THEN DRAW "c11"
+                     IF k3$ = "L" THEN DRAW "c12"
+                     IF k3$ = "M" THEN DRAW "c13"
+                     IF k3$ = "N" THEN DRAW "c14"
+                     IF k3$ = "O" THEN DRAW "c15"
+                     IF k2$ = "4" THEN x = x - 5
+                     IF k2$ = "4" THEN DRAW "l5"
+                     PSET (x, y)
+                     IF k3$ = "A" THEN DRAW "c1"
+                     IF k3$ = "B" THEN DRAW "c2"
+                     IF k3$ = "C" THEN DRAW "c3"
+                     IF k3$ = "D" THEN DRAW "c4"
+                     IF k3$ = "E" THEN DRAW "c5"
+                     IF k3$ = "F" THEN DRAW "c6"
+                     IF k3$ = "G" THEN DRAW "c7"
+                     IF k3$ = "H" THEN DRAW "c8"
+                     IF k3$ = "I" THEN DRAW "c9"
+                     IF k3$ = "J" THEN DRAW "c10"
+                     IF k3$ = "K" THEN DRAW "c11"
+                     IF k3$ = "L" THEN DRAW "c12"
+                     IF k3$ = "M" THEN DRAW "c13"
+                     IF k3$ = "N" THEN DRAW "c14"
+                     IF k3$ = "O" THEN DRAW "c15"
+                     IF k2$ = "6" THEN x = x + 5
+                     IF k2$ = "6" THEN DRAW "r5"
+                     PSET (x, y)
+                     IF k3$ = "A" THEN DRAW "c1"
+                     IF k3$ = "B" THEN DRAW "c2"
+                     IF k3$ = "C" THEN DRAW "c3"
+                     IF k3$ = "D" THEN DRAW "c4"
+                     IF k3$ = "E" THEN DRAW "c5"
+                     IF k3$ = "F" THEN DRAW "c6"
+                     IF k3$ = "G" THEN DRAW "c7"
+                     IF k3$ = "H" THEN DRAW "c8"
+                     IF k3$ = "I" THEN DRAW "c9"
+                     IF k3$ = "J" THEN DRAW "c10"
+                     IF k3$ = "K" THEN DRAW "c11"
+                     IF k3$ = "L" THEN DRAW "c12"
+                     IF k3$ = "M" THEN DRAW "c13"
+                     IF k3$ = "N" THEN DRAW "c14"
+                     IF k3$ = "O" THEN DRAW "c15"
+                     IF k2$ = "8" THEN y = y - 5
+                     IF k2$ = "8" THEN DRAW "u5"
+                     PSET (x, y)
+                     IF k3$ = "A" THEN DRAW "c1"
+                     IF k3$ = "B" THEN DRAW "c2"
+                     IF k3$ = "C" THEN DRAW "c3"
+                     IF k3$ = "D" THEN DRAW "c4"
+                     IF k3$ = "E" THEN DRAW "c5"
+                     IF k3$ = "F" THEN DRAW "c6"
+                     IF k3$ = "G" THEN DRAW "c7"
+                     IF k3$ = "H" THEN DRAW "c8"
+                     IF k3$ = "I" THEN DRAW "c9"
+                     IF k3$ = "J" THEN DRAW "c10"
+                     IF k3$ = "K" THEN DRAW "c11"
+                     IF k3$ = "L" THEN DRAW "c12"
+                     IF k3$ = "M" THEN DRAW "c13"
+                     IF k3$ = "N" THEN DRAW "c14"
+                     IF k3$ = "O" THEN DRAW "c15"
+                     IF k2$ = "9" THEN x = x + 5
+                     IF k2$ = "9" THEN y = y - 5
+                     IF k2$ = "9" THEN DRAW "e5"
+                     PSET (x, y)
+                     IF k3$ = "A" THEN DRAW "c1"
+                     IF k3$ = "B" THEN DRAW "c2"
+                     IF k3$ = "C" THEN DRAW "c3"
+                     IF k3$ = "D" THEN DRAW "c4"
+                     IF k3$ = "E" THEN DRAW "c5"
+                     IF k3$ = "F" THEN DRAW "c6"
+                     IF k3$ = "G" THEN DRAW "c7"
+                     IF k3$ = "H" THEN DRAW "c8"
+                     IF k3$ = "I" THEN DRAW "c9"
+                     IF k3$ = "J" THEN DRAW "c10"
+                     IF k3$ = "K" THEN DRAW "c11"
+                     IF k3$ = "L" THEN DRAW "c12"
+                     IF k3$ = "M" THEN DRAW "c13"
+                     IF k3$ = "N" THEN DRAW "c14"
+                     IF k3$ = "O" THEN DRAW "c15"
+                     IF k2$ = "7" THEN x = x - 5
+                     IF k2$ = "7" THEN y = y - 5
+                     IF k2$ = "7" THEN DRAW "h5"
+                     PSET (x, y)
+                     IF k3$ = "A" THEN DRAW "c1"
+                     IF k3$ = "B" THEN DRAW "c2"
+                     IF k3$ = "C" THEN DRAW "c3"
+                     IF k3$ = "D" THEN DRAW "c4"
+                     IF k3$ = "E" THEN DRAW "c5"
+                     IF k3$ = "F" THEN DRAW "c6"
+                     IF k3$ = "G" THEN DRAW "c7"
+                     IF k3$ = "H" THEN DRAW "c8"
+                     IF k3$ = "I" THEN DRAW "c9"
+                     IF k3$ = "J" THEN DRAW "c10"
+                     IF k3$ = "K" THEN DRAW "c11"
+                     IF k3$ = "L" THEN DRAW "c12"
+                     IF k3$ = "M" THEN DRAW "c13"
+                     IF k3$ = "N" THEN DRAW "c14"
+                     IF k3$ = "O" THEN DRAW "c15"
+                     IF k2$ = "1" THEN x = x - 5
+                     IF k2$ = "1" THEN y = y + 5
+                     IF k2$ = "1" THEN DRAW "g5"
+                     PSET (x, y)
+                     IF k3$ = "A" THEN DRAW "c1"
+                     IF k3$ = "B" THEN DRAW "c2"
+                     IF k3$ = "C" THEN DRAW "c3"
+                     IF k3$ = "D" THEN DRAW "c4"
+                     IF k3$ = "E" THEN DRAW "c5"
+                     IF k3$ = "F" THEN DRAW "c6"
+                     IF k3$ = "G" THEN DRAW "c7"
+                     IF k3$ = "H" THEN DRAW "c8"
+                     IF k3$ = "I" THEN DRAW "c9"
+                     IF k3$ = "J" THEN DRAW "c10"
+                     IF k3$ = "K" THEN DRAW "c11"
+                     IF k3$ = "L" THEN DRAW "c12"
+                     IF k3$ = "M" THEN DRAW "c13"
+                     IF k3$ = "N" THEN DRAW "c14"
+                     IF k3$ = "O" THEN DRAW "c15"
+                     IF k2$ = "3" THEN x = x + 5
+                     IF k2$ = "3" THEN y = y + 5
+                     IF k2$ = "3" THEN DRAW "f5"
+                     IF k2$ = "0" THEN GOTO des5
+                     IF k$ = "q" OR k$ = "r" OR k$ = "j" THEN LOCATE 1, 2: PRINT "                                                   "
+                     IF k2$ = "q" THEN END
+                     IF k2$ = "r" THEN GOTO remplissage
+                     IF k2$ = "j" THEN abc = 1
+                     IF k2$ = "j" THEN GOTO cercle
+                     GOTO dess
+des5:
+                     LOCATE 1, 2: PRINT "Choisisser le couleur"
+                     COLOR 1, c
+                     LOCATE 1, 60: PRINT "A Bleu"
+                     COLOR 2, c
+                     LOCATE 2, 60: PRINT "B Vert"
+                     COLOR 3, c
+                     LOCATE 3, 60: PRINT "C Cyan"
+                     COLOR 4, c
+                     LOCATE 4, 60: PRINT "D Rouge"
+                     COLOR 5, c
+                     LOCATE 5, 60: PRINT "E Violet"
+                     COLOR 6, c
+                     LOCATE 6, 60: PRINT "F Marron"
+                     COLOR 15, c
+                     LOCATE 7, 60: PRINT "G Blanc"
+                     COLOR 8, c
+                     LOCATE 8, 60: PRINT "H Gris"
+                     COLOR 9, c
+                     LOCATE 9, 60: PRINT "I Bleu clair"
+                     COLOR 10, c
+                     LOCATE 10, 60: PRINT "J Vert clair"
+                     COLOR 11, c
+                     LOCATE 11, 60: PRINT "K Cyan clair"
+                     COLOR 12, c
+                     LOCATE 12, 60: PRINT "L Rouge clair"
+                     COLOR 13, c
+                     LOCATE 13, 60: PRINT "M Violet clair"
+                     COLOR 14, c
+                     LOCATE 14, 60: PRINT "N Jaune"
+                     COLOR 15, c
+                     LOCATE 15, 60: PRINT "O Blanc brillant"
+                     COLOR 15, 7
+                     k3$ = ""
+                     WHILE k3$ = ""
+                     k3$ = INKEY$
+                     IF k3$ = "a" THEN k3$ = "A"
+                     IF k3$ = "b" THEN k3$ = "B"
+                     IF k3$ = "c" THEN k3$ = "C"
+                     IF k3$ = "d" THEN k3$ = "D"
+                     IF k3$ = "e" THEN k3$ = "E"
+                     IF k3$ = "f" THEN k3$ = "F"
+                     IF k3$ = "g" THEN k3$ = "G"
+                     IF k3$ = "h" THEN k3$ = "H"
+                     IF k3$ = "i" THEN k3$ = "I"
+                     IF k3$ = "j" THEN k3$ = "J"
+                     IF k3$ = "k" THEN k3$ = "K"
+                     IF k3$ = "l" THEN k3$ = "L"
+                     IF k3$ = "m" THEN k3$ = "M"
+                     IF k3$ = "n" THEN k3$ = "N"
+                     IF k3$ = "o" THEN k3$ = "O"
+                     WEND
+                     LOCATE 1, 60: PRINT "                  "
+                     LOCATE 2, 60: PRINT "                  "
+                     LOCATE 3, 60: PRINT "                  "
+                     LOCATE 4, 60: PRINT "                  "
+                     LOCATE 5, 60: PRINT "                  "
+                     LOCATE 6, 60: PRINT "                  "
+                     LOCATE 7, 60: PRINT "                  "
+                     LOCATE 8, 60: PRINT "                  "
+                     LOCATE 9, 60: PRINT "                  "
+                     LOCATE 10, 60: PRINT "                  "
+                     LOCATE 11, 60: PRINT "                  "
+                     LOCATE 12, 60: PRINT "                  "
+                     LOCATE 13, 60: PRINT "                  "
+                     LOCATE 14, 60: PRINT "                  "
+                     LOCATE 15, 60: PRINT "                  "
+                     LOCATE 16, 60: PRINT "                  "
+                     GOTO des4
+

@@ -1,0 +1,101 @@
+     
+      '*********
+      '* ESSAI *
+      '*********
+debut:
+      SCREEN 9
+      COLOR 15, 11
+      DRAW "c4"
+      DRAW "u100 h40 g40 l120 e40 r120 "
+      DRAW "bd140 br40 l200 u100 r200 l80 d100 "
+      DRAW "bu110"
+      DRAW "p12,4"
+      DRAW "bd20 bl10 "
+      DRAW "p13,4"
+      DRAW "br20"
+      DRAW "p13,4"
+      DRAW "bu15"
+      DRAW "p13,4"
+
+      COLOR 10
+      LOCATE 11, 45
+      PRINT " tape 11 pour quiter"
+      COLOR 12
+      LOCATE 17, 11
+      INPUT "tape un nombre"; a
+      COLOR 14
+      LOCATE 21, 11
+      PRINT "Tape sur une touche pour continuer"
+      COLOR 9
+      LOCATE 18, 11
+      IF a = 0 THEN PRINT "bonjour!"
+      LOCATE 18, 11
+      IF a = 1 THEN PRINT "bonsoir!"
+      LOCATE 18, 11
+      IF a = 2 THEN PRINT "salut!"
+      LOCATE 18, 11
+      IF a = 3 THEN PRINT "tchao!"
+      LOCATE 18, 11
+      IF a = 4 THEN PRINT "coucou!"
+      LOCATE 18, 11
+      IF a = 5 THEN PRINT "baybay!"
+      LOCATE 18, 11
+      IF a = 6 THEN PRINT "yahou!"
+      LOCATE 18, 11
+      IF a = 7 THEN PRINT "super!"
+      LOCATE 18, 11
+      IF a = 8 THEN PRINT "g‚nial!"
+      LOCATE 18, 11
+      IF a = 9 THEN PRINT "coole! "
+      LOCATE 18, 11
+      IF a = 10 THEN PRINT "trop bien! "
+      LOCATE 18, 11
+      IF a = 11 THEN END
+
+      WHILE INKEY$ = ""
+      WEND
+      CLS
+      GOTO debut
+
+ 
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
